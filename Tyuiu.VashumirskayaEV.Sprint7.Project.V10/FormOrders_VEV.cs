@@ -17,7 +17,6 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
             InitializeComponent();
         }
 
-        // ЗАГРУЗКА CSV
         private void buttonRun_VEV_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog dialog = new OpenFileDialog())
@@ -46,7 +45,6 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
             }
         }
 
-        // ПОИСК
         private void textBoxSearch_VEV_TextChanged(object sender, EventArgs e)
         {
             string filter = textBoxSearch_VEV.Text.ToLower();
@@ -62,7 +60,6 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
             }
         }
 
-        // СОХРАНЕНИЕ
         private void buttonSave_VEV_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -72,7 +69,6 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
             {
                 using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName, false, Encoding.UTF8))
                 {
-                    // заголовки
                     for (int i = 0; i < DataGridViewOrders_VEV.Columns.Count; i++)
                     {
                         writer.Write(DataGridViewOrders_VEV.Columns[i].HeaderText);
@@ -81,7 +77,6 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
                     }
                     writer.WriteLine();
 
-                    // строки
                     foreach (DataGridViewRow row in DataGridViewOrders_VEV.Rows)
                     {
                         if (row.IsNewRow) continue;
@@ -100,7 +95,6 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
             }
         }
 
-        // АНАЛИТИКА
         private void buttonAnalytics_VEV_Click(object sender, EventArgs e)
         {
             if (ordersData == null || ordersData.Count == 0)
@@ -113,7 +107,6 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
             analyticsForm.ShowDialog();
         }
 
-        // ЗАКРЫТЬ
         private void buttonClose_VEV_Click(object sender, EventArgs e)
         {
             Close();

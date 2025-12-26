@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
 {
@@ -48,6 +49,7 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10
                 bar.Width = barWidth;
                 bar.Height = barHeight;
                 bar.BackColor = Color.LightPink;
+                
                 bar.Left = i * (barWidth + spacing) + 40;
                 bar.Top = panelChart_VEV.Height - barHeight - 40;
 

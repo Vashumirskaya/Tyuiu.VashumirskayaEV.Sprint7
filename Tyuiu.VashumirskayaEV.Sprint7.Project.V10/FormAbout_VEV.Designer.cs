@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             buttonClose_VEV = new Button();
+            toolTipClose = new ToolTip(components);
+            toolTipPhoto = new ToolTip(components);
+            toolTipInfo = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -43,6 +47,7 @@
             pictureBox1.Size = new Size(210, 267);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            toolTipPhoto.SetToolTip(pictureBox1, "Фото разработчика");
             // 
             // label1
             // 
@@ -53,6 +58,7 @@
             label1.Size = new Size(389, 100);
             label1.TabIndex = 1;
             label1.Text = "Разработчик: Вашумирская Елизавета Владимировна\r\nГруппа: СМАРТб-25-1\r\nПрограмма разработана в рамках обучения языка С#\r\nТюменский Индустриальный Университет (ВШЦТ)\r\nВнутреннее имя:";
+            toolTipInfo.SetToolTip(label1, "Краткая информация");
             // 
             // buttonClose_VEV
             // 
@@ -62,6 +68,7 @@
             buttonClose_VEV.Size = new Size(126, 44);
             buttonClose_VEV.TabIndex = 2;
             buttonClose_VEV.Text = "Закрыть";
+            toolTipClose.SetToolTip(buttonClose_VEV, "Закрыть окно");
             buttonClose_VEV.UseVisualStyleBackColor = true;
             buttonClose_VEV.Click += buttonClose_VEV_Click;
             // 
@@ -86,5 +93,8 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button buttonClose_VEV;
+        private ToolTip toolTipClose;
+        private ToolTip toolTipPhoto;
+        private ToolTip toolTipInfo;
     }
 }

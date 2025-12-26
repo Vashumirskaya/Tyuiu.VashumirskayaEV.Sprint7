@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             labelSearch_VEV = new Label();
             textBoxSearch_VEV = new TextBox();
             DataGridViewOrders_VEV = new DataGridView();
@@ -35,6 +36,12 @@
             buttonSave_VEV = new Button();
             buttonClose_VEV = new Button();
             buttonAnalytics_VEV = new Button();
+            toolTipClose = new ToolTip(components);
+            toolTipPoisk = new ToolTip(components);
+            toolTipTable = new ToolTip(components);
+            toolTipSave = new ToolTip(components);
+            toolTipAnalytics = new ToolTip(components);
+            toolTipRun = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)DataGridViewOrders_VEV).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +61,7 @@
             textBoxSearch_VEV.Name = "textBoxSearch_VEV";
             textBoxSearch_VEV.Size = new Size(684, 27);
             textBoxSearch_VEV.TabIndex = 1;
+            toolTipPoisk.SetToolTip(textBoxSearch_VEV, "Введите текст для поиска по заказам");
             textBoxSearch_VEV.TextChanged += textBoxSearch_VEV_TextChanged;
             // 
             // DataGridViewOrders_VEV
@@ -68,6 +76,7 @@
             DataGridViewOrders_VEV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DataGridViewOrders_VEV.Size = new Size(756, 284);
             DataGridViewOrders_VEV.TabIndex = 2;
+            toolTipTable.SetToolTip(DataGridViewOrders_VEV, "Список заказов из CSV-файла");
             DataGridViewOrders_VEV.CellContentClick += DataGridViewOrders_VEV_CellContentClick;
             // 
             // buttonRun_VEV
@@ -78,6 +87,7 @@
             buttonRun_VEV.Size = new Size(175, 70);
             buttonRun_VEV.TabIndex = 3;
             buttonRun_VEV.Text = "Запустить";
+            toolTipRun.SetToolTip(buttonRun_VEV, "Выберите CSV-файл");
             buttonRun_VEV.UseVisualStyleBackColor = true;
             buttonRun_VEV.Click += buttonRun_VEV_Click;
             // 
@@ -89,6 +99,7 @@
             buttonSave_VEV.Size = new Size(175, 70);
             buttonSave_VEV.TabIndex = 4;
             buttonSave_VEV.Text = "Сохранить";
+            toolTipSave.SetToolTip(buttonSave_VEV, "Сохранить текущие заказы в CSV-файл");
             buttonSave_VEV.UseVisualStyleBackColor = true;
             buttonSave_VEV.Click += buttonSave_VEV_Click;
             // 
@@ -100,6 +111,7 @@
             buttonClose_VEV.Size = new Size(175, 70);
             buttonClose_VEV.TabIndex = 5;
             buttonClose_VEV.Text = "Закрыть";
+            toolTipClose.SetToolTip(buttonClose_VEV, "Закрыть текущее окно");
             buttonClose_VEV.UseVisualStyleBackColor = true;
             buttonClose_VEV.Click += buttonClose_VEV_Click;
             // 
@@ -111,6 +123,7 @@
             buttonAnalytics_VEV.Size = new Size(175, 70);
             buttonAnalytics_VEV.TabIndex = 6;
             buttonAnalytics_VEV.Text = "Аналитика";
+            toolTipAnalytics.SetToolTip(buttonAnalytics_VEV, "Показать аналитику по частоте заказов");
             buttonAnalytics_VEV.UseVisualStyleBackColor = true;
             buttonAnalytics_VEV.Click += buttonAnalytics_VEV_Click;
             // 
@@ -143,5 +156,11 @@
         private Button buttonSave_VEV;
         private Button buttonClose_VEV;
         private Button buttonAnalytics_VEV;
+        private ToolTip toolTipClose;
+        private ToolTip toolTipPoisk;
+        private ToolTip toolTipTable;
+        private ToolTip toolTipSave;
+        private ToolTip toolTipAnalytics;
+        private ToolTip toolTipRun;
     }
 }

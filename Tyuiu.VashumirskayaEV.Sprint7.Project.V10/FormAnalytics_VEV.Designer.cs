@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             labelTitleAnalytics_VEV = new Label();
             buttonClose_VEV = new Button();
             panelChart_VEV = new Panel();
+            toolTipClose = new ToolTip(components);
+            toolTipAnalytics = new ToolTip(components);
             SuspendLayout();
             // 
             // labelTitleAnalytics_VEV
@@ -54,6 +57,7 @@
             buttonClose_VEV.Size = new Size(155, 72);
             buttonClose_VEV.TabIndex = 2;
             buttonClose_VEV.Text = "Закрыть";
+            toolTipClose.SetToolTip(buttonClose_VEV, "Закрыть текущее окно");
             buttonClose_VEV.UseVisualStyleBackColor = true;
             buttonClose_VEV.Click += buttonClose_VEV_Click;
             // 
@@ -64,6 +68,7 @@
             panelChart_VEV.Name = "panelChart_VEV";
             panelChart_VEV.Size = new Size(615, 401);
             panelChart_VEV.TabIndex = 3;
+            toolTipAnalytics.SetToolTip(panelChart_VEV, "Гистограмма частоты заказов по товарам");
             // 
             // FormAnalytics_VEV
             // 
@@ -85,5 +90,7 @@
         private Label labelTitleAnalytics_VEV;
         private Button buttonClose_VEV;
         private Panel panelChart_VEV;
+        private ToolTip toolTipClose;
+        private ToolTip toolTipAnalytics;
     }
 }

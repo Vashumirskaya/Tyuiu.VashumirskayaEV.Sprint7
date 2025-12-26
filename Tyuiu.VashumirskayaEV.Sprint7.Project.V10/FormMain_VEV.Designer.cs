@@ -35,6 +35,7 @@
             buttonOpenOrders_VEV = new Button();
             toolTipMain_VEV = new ToolTip(components);
             errorProvider1 = new ErrorProvider(components);
+            toolTipOpen = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -72,6 +73,7 @@
             buttonOpenOrders_VEV.Size = new Size(198, 103);
             buttonOpenOrders_VEV.TabIndex = 3;
             buttonOpenOrders_VEV.Text = "Открыть";
+            toolTipOpen.SetToolTip(buttonOpenOrders_VEV, "Открыть окно работы с заказами");
             buttonOpenOrders_VEV.UseVisualStyleBackColor = false;
             buttonOpenOrders_VEV.Click += buttonOpenOrders_VEV_Click;
             // 
@@ -103,5 +105,6 @@
         private Button buttonOpenOrders_VEV;
         private ToolTip toolTipMain_VEV;
         private ErrorProvider errorProvider1;
+        private ToolTip toolTipOpen;
     }
 }
