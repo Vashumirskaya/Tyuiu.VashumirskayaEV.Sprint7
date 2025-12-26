@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             labelTitleAnalytics_VEV = new Label();
-            chartOrders_VEV = new System.Windows.Forms.DataVisualization.Charting.Chart();
             buttonClose_VEV = new Button();
-            ((System.ComponentModel.ISupportInitialize)chartOrders_VEV).BeginInit();
+            panelChart_VEV = new Panel();
             SuspendLayout();
             // 
             // labelTitleAnalytics_VEV
@@ -48,23 +45,6 @@
             labelTitleAnalytics_VEV.Text = "Что заказывают чаще всего:";
             labelTitleAnalytics_VEV.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // chartOrders_VEV
-            // 
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Angle = -45;
-            chartArea1.AxisX.LabelStyle.Font = new Font("Microsoft Sans Serif", 10F);
-            chartArea1.AxisX.Title = "Товар";
-            chartArea1.AxisY.Title = "Кол-во заказов";
-            chartArea1.Name = "ChartArea1";
-            chartOrders_VEV.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chartOrders_VEV.Legends.Add(legend1);
-            chartOrders_VEV.Location = new Point(12, 44);
-            chartOrders_VEV.Name = "chartOrders_VEV";
-            chartOrders_VEV.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
-            chartOrders_VEV.Size = new Size(606, 394);
-            chartOrders_VEV.TabIndex = 1;
-            // 
             // buttonClose_VEV
             // 
             buttonClose_VEV.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -77,18 +57,25 @@
             buttonClose_VEV.UseVisualStyleBackColor = true;
             buttonClose_VEV.Click += buttonClose_VEV_Click;
             // 
+            // panelChart_VEV
+            // 
+            panelChart_VEV.BackColor = Color.White;
+            panelChart_VEV.Location = new Point(12, 37);
+            panelChart_VEV.Name = "panelChart_VEV";
+            panelChart_VEV.Size = new Size(615, 401);
+            panelChart_VEV.TabIndex = 3;
+            // 
             // FormAnalytics_VEV
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(800, 450);
+            Controls.Add(panelChart_VEV);
             Controls.Add(buttonClose_VEV);
-            Controls.Add(chartOrders_VEV);
             Controls.Add(labelTitleAnalytics_VEV);
             Name = "FormAnalytics_VEV";
             Text = "FormAnalytics_VEV";
-            ((System.ComponentModel.ISupportInitialize)chartOrders_VEV).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -96,7 +83,7 @@
         #endregion
 
         private Label labelTitleAnalytics_VEV;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartOrders_VEV;
         private Button buttonClose_VEV;
+        private Panel panelChart_VEV;
     }
 }
