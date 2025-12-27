@@ -13,7 +13,7 @@ namespace Tyuiu.VashumirskayaEV.Sprint7.Project.V10.Test
         {
             var service = new DataService();
 
-            string path = @"orders.csv";
+            string path = "orders.csv";
 
             var orders = service.LoadOrders(path);
 
